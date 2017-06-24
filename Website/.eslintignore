@@ -1,0 +1,7 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+# Ignore built files
+dist/*
+
+# Ignore webpack config
+webpack.config.*.js
