@@ -13,7 +13,7 @@ import FacebookLoginContainer from '../facebookLoginContainer';
 import { fetchWines } from '../../modules/wines';
 
 class AppLayoutContainer extends Component {
-  componentDidMount() {
+  componentDidUpdate() {
     if (this.props.isAuthenticated) {
       this.props.fetchWines();
       if (window.location.hash === '#/_=_') {
@@ -45,7 +45,7 @@ class AppLayoutContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.facebook.authenticated,
+  isAuthenticated: state.facebook.authenticated === true,
 });
 
 const mapDispatchToProps = (dispatch) => {

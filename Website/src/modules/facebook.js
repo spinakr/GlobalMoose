@@ -22,8 +22,7 @@ export default (state = initialState, action) => {
   }
 };
 
-export const authenticatedSuccessfully = (email, name) => (dispatch) => {
-  console.log(email);
-  console.log(name);
-  dispatch({ type: AUTHENTICATED, payload: { email, name } });
+export const authenticatedSuccessfully = claims => (dispatch) => {
+  console.log(claims);
+  dispatch({ type: AUTHENTICATED, payload: { email: claims.email, name: claims.name } });
 };

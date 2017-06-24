@@ -12,7 +12,7 @@ class FacebookLoginContainer extends Component {
         appId="1865156913809609"
         autoLoad="true"
         fields="name,email"
-        callback={claims => this.props.authenticatedSuccessfully(claims.email, claims.name)}
+        callback={claims => this.props.authenticatedSuccessfully(claims)}
       />
     );
   }
