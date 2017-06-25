@@ -26,6 +26,7 @@ namespace WinesApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddMvc();
         }
 
@@ -34,7 +35,7 @@ namespace WinesApi
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            app.UseCors("*");
             app.UseMvc();
         }
     }

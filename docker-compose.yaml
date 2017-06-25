@@ -1,0 +1,8 @@
+version: "3"
+services:
+  website:
+    build: ./Website
+    ports:
+      - "80:80"
+  webapi:
+    build: ./WinesApi 

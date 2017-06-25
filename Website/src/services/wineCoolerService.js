@@ -5,6 +5,7 @@ export const getWines = () => {
     const url = `${serviceBase}`;
     fetch(`${url}`, { method: 'GET', headers: { 'Content-Type': 'application/json' }, credentials: 'include' }).then((response) => {
       if (response.ok) {
+        console.log(`received ok response:  ${JSON.stringify(response)}`);
         response.text().then(resolve);
       } else {
         throw new Error(`failed to fetch: ${response.statusText}`);
