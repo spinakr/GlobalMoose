@@ -1,8 +1,0 @@
-C:\code\GlobalMoose\WinesApi\bin\Debug\netcoreapp1.1\WinesApi.deps.json
-C:\code\GlobalMoose\WinesApi\bin\Debug\netcoreapp1.1\WinesApi.runtimeconfig.json
-C:\code\GlobalMoose\WinesApi\bin\Debug\netcoreapp1.1\WinesApi.runtimeconfig.dev.json
-C:\code\GlobalMoose\WinesApi\bin\Debug\netcoreapp1.1\WinesApi.dll
-C:\code\GlobalMoose\WinesApi\bin\Debug\netcoreapp1.1\WinesApi.pdb
-C:\code\GlobalMoose\WinesApi\obj\Debug\netcoreapp1.1\WinesApi.AssemblyInfo.cs
-C:\code\GlobalMoose\WinesApi\obj\Debug\netcoreapp1.1\WinesApi.dll
-C:\code\GlobalMoose\WinesApi\obj\Debug\netcoreapp1.1\WinesApi.pdb
