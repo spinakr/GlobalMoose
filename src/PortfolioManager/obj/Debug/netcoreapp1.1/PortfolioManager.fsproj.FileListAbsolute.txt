@@ -1,7 +1,0 @@
-C:\code\GlobalMoose\src\PortfolioManager\bin\Debug\netcoreapp1.1\PortfolioManager.deps.json
-C:\code\GlobalMoose\src\PortfolioManager\bin\Debug\netcoreapp1.1\PortfolioManager.runtimeconfig.json
-C:\code\GlobalMoose\src\PortfolioManager\bin\Debug\netcoreapp1.1\PortfolioManager.runtimeconfig.dev.json
-C:\code\GlobalMoose\src\PortfolioManager\bin\Debug\netcoreapp1.1\PortfolioManager.dll
-C:\code\GlobalMoose\src\PortfolioManager\bin\Debug\netcoreapp1.1\PortfolioManager.pdb
-C:\code\GlobalMoose\src\PortfolioManager\obj\Debug\netcoreapp1.1\PortfolioManager.dll
-C:\code\GlobalMoose\src\PortfolioManager\obj\Debug\netcoreapp1.1\PortfolioManager.pdb
