@@ -3,7 +3,7 @@ module RebalancingTests
 open NUnit.Framework
 
 open Portfolio
-open Rebalancing
+open Transaction
 
 [<Test>]
 let ``GetRebalanceActions_GivenAllThreeOff0Extra_ShouldReturn3Actions`` () =

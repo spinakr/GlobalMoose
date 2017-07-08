@@ -1,3 +1,4 @@
+[<AutoOpen>]
 module Portfolio
 
 type FundAmount(name: string, amount: float) =
@@ -10,16 +11,6 @@ type Portfolio(equityFunds: FundAmount list, distribution: Map<string, float>) =
 
 let sumOfAssets funds =
     funds |> List.sumBy(fun (x:FundAmount) -> x.Amount)
-
-
-
-
-
-
-   
-
-
-
 
 
 
