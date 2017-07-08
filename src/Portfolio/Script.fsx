@@ -11,7 +11,7 @@ let distribution =
         .Add("KLP fremvoksende m", 10.)
 let portfolio = Portfolio(funds, distribution)
 
-let actions = getRebalanceActions 10000. portfolio
+let actions = getRebalanceActions portfolio 10000.
 
 printfn "Total assets: %f" (sumOfAssets funds)
 
