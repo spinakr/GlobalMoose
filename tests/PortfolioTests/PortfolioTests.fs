@@ -3,7 +3,7 @@ module PortfolioTests
 open NUnit.Framework
 
 open Portfolio
-open Transaction
+open Rebalancing
 
 [<Test>]
 let ``SumOfAssets_ShouldReturnSumOfAllFundAmounts`` () =

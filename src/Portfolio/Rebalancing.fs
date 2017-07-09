@@ -1,6 +1,6 @@
-module Transaction
+module Rebalancing
 
-type T = {FundName: string; Diff: float}
+type BalancingAction = {FundName: string; Diff: float}
 
 let getRebalanceActions (portfolio: Portfolio) extraInvestment = 
     let sum = sumOfAssets portfolio.EquityFunds
