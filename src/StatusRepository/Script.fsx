@@ -1,15 +1,14 @@
 #r "..\..\packages\FSharp.Data\lib\\net40\FSharp.Data.dll"
+#r "..\..\packages\FSharp.Configuration\lib\\net45\FSharp.Configuration.dll"
 #load "StatusFileReader.fs"
 open System.IO
 
 open StatusFileReader
 
-open FSharp.Data
-
-let transactions = loadAllTransactions()
-
-let firstrow = transactions.[0].Rows |> Seq.toList
-printfn "%A" transactions
 
 
+let statusUpdates = loadAllStatusUpdates()
 
+
+for status in statusUpdates do
+    printf "%A" statusUpdates.[0].Rows
