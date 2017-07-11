@@ -1,24 +1,18 @@
 module StatusRepositoryTests
 
 open NUnit.Framework
-open Portfolio
 open StatusFileReader
 
 [<Test>]
 let ``LoadAllStatusUpdates_ShouldReadAllFilesInDirectory`` () =
-    // let statusUpdates = loadAllStatusUpdates()
-    // let firstFile = statusUpdates.[0]
+    let statusUpdates = loadAllStatusUpdates "tests\\StatusRepositoryTests\\TestFiles\\"
+    let firstFile = statusUpdates.[0]
 
-    // let lines = firstFile.Rows
-    // printf "Lines:    %A \n" lines
+    let lines = firstFile.Rows
+    let firstItem = Seq.item 0 lines
+    let amount = firstItem.Amount
 
-    // let firstItem = Seq.item 0 lines
-    // printf "Item:     %A \n" firstItem
-
-    // let firstProperty = firstItem.Amount
-    // printf "Prop:     %i \n" firstProperty
-
-    Assert.AreEqual(2, 2)
+    Assert.AreEqual(amount, 1000)
 
 
 

@@ -5,15 +5,12 @@ open System.IO
 open StatusFileReader
 
 
-let statusUpdates = loadAllStatusUpdates()
+let statusUpdates = loadAllStatusUpdates "C:\\Users\\ank\\OneDrive\\GlobalMoose\\StatusUpdates\\"
 let firstFile = statusUpdates.[0]
 printf "\n File:    %A \n" firstFile
 
-let lines = firstFile.Rows
-printf "Lines:    %A \n" lines
+let firstRow = firstFile.Rows |> Seq.head
+printf "Row:    %A \n" firstRow
 
-let firstItem = Seq.item 0 lines
-printf "Item:     %A \n" firstItem
-
-let firstProperty = firstItem.Amount
+let firstProperty = firstRow.Amount
 printf "Prop:     %i \n" firstProperty

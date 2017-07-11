@@ -1,14 +1,16 @@
 module PortfolioManager
-
+    
+open FSharp.Configuration
 open Portfolio
 open StatusFileReader
+
+type Settings = AppSettings<"App.config">
 
 [<EntryPoint>]
 let main argv =
 
-    let statusUpdates = loadAllStatusUpdates()
+    let statusUpdates = loadAllStatusUpdates Settings.FileDirectoryPath
 
-    let statusUpdates = loadAllStatusUpdates()
     let firstFile = statusUpdates.[0]
     printf "\n File:    %A \n" firstFile
 
@@ -18,10 +20,8 @@ let main argv =
     let firstItem = Seq.item 0 lines
     printf "Item:     %A \n" firstItem
 
-    // let firstProperty = firstItem.Amount
-    // printf "Prop:     %i \n" firstProperty
-    
-    
+    let firstProperty = firstItem.Amount
+    printf "Amount:     %i \n" firstProperty
 
 
 

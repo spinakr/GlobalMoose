@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Name>StatusRepositoryTests</Name>
@@ -41,12 +41,9 @@
       <Name>StatusRepository.fsproj</Name>
       <Project>{2051dcd1-8c6b-4bd7-976f-753845e50988}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Portfolio\Portfolio.fsproj">
-      <Name>Portfolio.fsproj</Name>
-      <Project>{2f04d967-13a7-4115-9454-9f995fc4e78d}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <Compile Include="StatusRepositoryTests.fs" />
     <None Include="Script.fsx" />
   </ItemGroup>
