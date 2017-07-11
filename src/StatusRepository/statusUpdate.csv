@@ -1,2 +1,2 @@
-Fund;Amount;Date;Invested
-Fund1;1000;2017-01-01;200
+Fund,Amount,Invested
+Fund1,1000,200

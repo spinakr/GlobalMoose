@@ -8,9 +8,18 @@ let main argv =
 
     let statusUpdates = loadAllStatusUpdates()
 
+    let statusUpdates = loadAllStatusUpdates()
+    let firstFile = statusUpdates.[0]
+    printf "\n File:    %A \n" firstFile
 
-    for status in statusUpdates do
-        printf "%A" statusUpdates.[0].Rows
+    let lines = firstFile.Rows
+    printf "Lines:    %A \n" lines
+
+    let firstItem = Seq.item 0 lines
+    printf "Item:     %A \n" firstItem
+
+    // let firstProperty = firstItem.Amount
+    // printf "Prop:     %i \n" firstProperty
     
     
 

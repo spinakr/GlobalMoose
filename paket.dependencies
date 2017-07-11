@@ -3,5 +3,6 @@ nuget FAKE
 nuget FSharp.Core
 nuget FSharp.Data
 nuget FSharp.Configuration
+nuget FsUnit
 nuget NUnit
 nuget NUnit.ConsoleRunner

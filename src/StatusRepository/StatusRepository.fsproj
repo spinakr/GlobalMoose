@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="StatusFileReader.fs" />
     <None Include="Script.fsx" />
-    <None Include="transactions.csv">
+    <None Include="statusUpdate.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

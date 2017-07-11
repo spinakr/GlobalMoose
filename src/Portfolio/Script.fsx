@@ -1,5 +1,5 @@
 #load "Portfolio.fs"
-#load "Transaction.fs"
+#load "Rebalancing.fs"
 open Rebalancing
 
 let funds = [FundAmount("DNB Global Indeks", 3000.); FundAmount("DNB Teknologi", 2000.); FundAmount("KLP fremvoksende m", 1000.)]
