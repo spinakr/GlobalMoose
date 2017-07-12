@@ -16,12 +16,16 @@ let toStatusUpdates statusUpdates =
 [<EntryPoint>]
 let main argv =
 
-    let statusUpdates = loadAllStatusUpdates Settings.FileDirectoryPath |> toStatusUpdates
+    let statusUpdates = 
+        loadAllStatusUpdates Settings.FileDirectoryPath 
+        |> toStatusUpdates 
+
+    let totalsByDate = 
+        statusUpdates
+        |> List.groupBy (fun x -> x.Date)
+        |> List.map (fun (key, group) -> key, group |> List.sumBy (fun x -> x.Amount))
 
 
-    let chartingData = [for status in statusUpdates -> (status.Date, status.Amount)]
-    printf "Amount:     %A \n" chartingData
-
-    System.Windows.Forms.Application.Run (Chart.Line(chartingData).ShowChart())
+    System.Windows.Forms.Application.Run (Chart.Line(totalsByDate).ShowChart())
 
     0 // return an integer exit code
