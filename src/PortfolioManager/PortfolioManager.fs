@@ -1,29 +1,27 @@
 module PortfolioManager
     
 open FSharp.Configuration
+open FSharp.Charting
 open Portfolio
 open StatusFileReader
+open System
 
 type Settings = AppSettings<"App.config">
+
+let toStatusUpdates statusUpdates = 
+    Array.map (fun (s:StatusUpdate) -> s.Rows |> Seq.toList) statusUpdates
+    |> List.concat
+
 
 [<EntryPoint>]
 let main argv =
 
-    let statusUpdates = loadAllStatusUpdates Settings.FileDirectoryPath
-
-    let firstFile = statusUpdates.[0]
-    printf "\n File:    %A \n" firstFile
-
-    let lines = firstFile.Rows
-    printf "Lines:    %A \n" lines
-
-    let firstItem = Seq.item 0 lines
-    printf "Item:     %A \n" firstItem
-
-    let firstProperty = firstItem.Amount
-    printf "Amount:     %i \n" firstProperty
+    let statusUpdates = loadAllStatusUpdates Settings.FileDirectoryPath |> toStatusUpdates
 
 
+    let chartingData = [for status in statusUpdates -> (status.Date, status.Amount)]
+    printf "Amount:     %A \n" chartingData
 
-    
+    System.Windows.Forms.Application.Run (Chart.Line(chartingData).ShowChart())
+
     0 // return an integer exit code
