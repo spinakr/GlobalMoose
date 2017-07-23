@@ -9,5 +9,6 @@ let loadAllStatusUpdates fileDirectory =
     match Directory.GetFiles(fileDirectory, "*.csv") with
     | [||] -> [||]
     | arr -> Array.map (Path.GetFullPath >> StatusUpdate.Load) arr
+    |> Array.map (fun (s:StatusUpdate) -> s.Rows |> Seq.toList) |> List.concat
 
 

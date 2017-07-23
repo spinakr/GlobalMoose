@@ -8,8 +8,7 @@ let ``LoadAllStatusUpdates_ShouldReadAllFilesInDirectory`` () =
     let statusUpdates = loadAllStatusUpdates "tests\\StatusRepositoryTests\\TestFiles\\"
     let firstFile = statusUpdates.[0]
 
-    let lines = firstFile.Rows
-    let firstItem = Seq.item 0 lines
+    let firstItem = Seq.item 0 statusUpdates
     let amount = firstItem.Amount
 
     Assert.AreEqual(amount, 1000)

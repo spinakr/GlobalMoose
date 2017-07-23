@@ -8,24 +8,21 @@ open System
 
 type Settings = AppSettings<"App.config">
 
-let toStatusUpdates statusUpdates = 
-    Array.map (fun (s:StatusUpdate) -> s.Rows |> Seq.toList) statusUpdates
-    |> List.concat
+let totalsByDate statusUpdates = 
+    statusUpdates
+    |> List.groupBy (fun (x:StatusUpdate.Row) -> x.Date)
+    |> List.map (fun (key, group) -> key, group |> List.sumBy (fun x -> x.Amount))
+
+let chartAmountPerDate (totalsByDate:(DateTime * int) list) = 
+    System.Windows.Forms.Application.Run (Chart.Line(totalsByDate).ShowChart())
 
 
 [<EntryPoint>]
 let main argv =
 
-    let statusUpdates = 
-        loadAllStatusUpdates Settings.FileDirectoryPath 
-        |> toStatusUpdates 
+    let statusUpdates = loadAllStatusUpdates Settings.FileDirectoryPath 
 
-    let totalsByDate = 
-        statusUpdates
-        |> List.groupBy (fun x -> x.Date)
-        |> List.map (fun (key, group) -> key, group |> List.sumBy (fun x -> x.Amount))
+    (totalsByDate >> chartAmountPerDate) statusUpdates
 
-
-    System.Windows.Forms.Application.Run (Chart.Line(totalsByDate).ShowChart())
 
     0 // return an integer exit code
