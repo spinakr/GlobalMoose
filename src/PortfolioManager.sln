@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PortfolioManager", "PortfolioManager\PortfolioManager.fsproj", "{AFD3ABA9-6B88-4BCD-A0C0-234A06764757}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "StatusRepository", "StatusRepository\StatusRepository.fsproj", "{2051DCD1-8C6B-4BD7-976F-753845E50988}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Portfolio", "Portfolio\Portfolio.fsproj", "{2F04D967-13A7-4115-9454-9F995FC4E78D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFD3ABA9-6B88-4BCD-A0C0-234A06764757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD3ABA9-6B88-4BCD-A0C0-234A06764757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD3ABA9-6B88-4BCD-A0C0-234A06764757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD3ABA9-6B88-4BCD-A0C0-234A06764757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2051DCD1-8C6B-4BD7-976F-753845E50988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2051DCD1-8C6B-4BD7-976F-753845E50988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2051DCD1-8C6B-4BD7-976F-753845E50988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2051DCD1-8C6B-4BD7-976F-753845E50988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F04D967-13A7-4115-9454-9F995FC4E78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F04D967-13A7-4115-9454-9F995FC4E78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F04D967-13A7-4115-9454-9F995FC4E78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F04D967-13A7-4115-9454-9F995FC4E78D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
