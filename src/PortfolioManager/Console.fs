@@ -9,15 +9,10 @@ open Calculation
 type Settings = AppSettings<"App.config">
 
 let getUserCommand() =
-    Console.Clear()
-    """
-1 : Chart value per fund
-2 : Chart total portfolio value
-3 : Total value 
-4 : Total profit
-
-q : Exit
-    """ |> printfn "%s"
+    printfn "1 : Chart value per fund"
+    printfn "2 : Chart total portfolio value"
+    printfn "\n"
+    printfn "q : Exit"
 
     System.Console.ReadKey().Key
  
@@ -29,12 +24,15 @@ let showResult result =
 let rec run() =
     let statusUpdates = loadAllStatusUpdates Settings.FileDirectoryPath 
 
+    printfn "Total value: %i" (totalValue statusUpdates)
+    printfn "Total profit: %i (%.1f %%)" (totalProfit statusUpdates) (totalProfitInPercent statusUpdates)
+    printfn "\n"
+
     let key = getUserCommand()
+    Console.Clear()
     match key with
         | System.ConsoleKey.D1 -> chartFunds statusUpdates
         | System.ConsoleKey.D2 -> chartSumOfFunds statusUpdates
-        | System.ConsoleKey.D3 -> showResult (sprintf "Total value: %i" (totalValue statusUpdates)) 
-        | System.ConsoleKey.D4 -> showResult (sprintf "Total profit: %i (%.1f %%)" (totalProfit statusUpdates) (totalProfitInPercent statusUpdates)) 
         | System.ConsoleKey.Q -> ()
         | _ -> printfn "Unknown command"
 
