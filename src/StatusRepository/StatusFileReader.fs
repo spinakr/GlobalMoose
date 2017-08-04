@@ -13,5 +13,3 @@ let loadAllStatusUpdates fileDirectory =
     | [||] -> [||]
     | files -> files |> Array.map parseTransactionFile
     |> List.concat
-
-

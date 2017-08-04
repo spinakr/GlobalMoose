@@ -3,12 +3,7 @@ module Charting
 open FSharp.Charting
 open StatusFileReader
 open System
-
-let totalsByDate statusUpdates = 
-    statusUpdates
-    |> List.groupBy (fun (x:StatusUpdate.Row) -> x.Date)
-    |> List.map (fun (key, group) -> key, group |> List.sumBy (fun x -> x.Amount))
-
+open Calculation
 
 let chartSumOfFunds (allStatusUpdates:StatusUpdate.Row list) = 
     System.Windows.Forms.Application.Run (Chart.Line(totalsByDate allStatusUpdates).ShowChart())
