@@ -31,7 +31,7 @@ Target "Build" (fun _ ->
 Target "Deploy" (fun _ ->
     !! (buildDir + "/**/*.*")
     -- "*.zip"
-    |> Zip buildDir (deployDir + "ApplicationName." + version + ".zip")
+    |> Zip buildDir (deployDir + "PortfolioManager." + version + ".zip")
 )
 
 Target "UnitTests" (fun _ ->
